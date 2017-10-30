@@ -30,6 +30,8 @@ RUN mv ~/bin/modman /usr/local/bin
 WORKDIR /var/www/htdocs
 
 VOLUME /var/www/htdocs
+VOLUME /etc/apache2
+VOLUME /var/log/apache2
 
 RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/htdocs/' /etc/apache2/sites-available/000-default.conf
 RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/htdocs/' /etc/apache2/sites-available/default-ssl.conf
