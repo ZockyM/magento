@@ -21,6 +21,7 @@ RUN requirements="libpng12-dev libmcrypt-dev libmcrypt4 libcurl3-dev libfreetype
 
 RUN usermod -u 1000 www-data
 RUN a2enmod rewrite
+RUN a2enmod ssl
 RUN sed -i -e 's/\/var\/www\/html/\/var\/www\/htdocs/' /etc/apache2/apache2.conf
 
 
